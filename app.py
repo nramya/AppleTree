@@ -10,7 +10,6 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///apple.db'
 
 
 def get_app():
-    """Return the application object."""
     return app
 
 

@@ -85,4 +85,3 @@ def home():
         return redirect('/')
 
     return render_template('app.html')
-    # return "<a href='/logout'>Logout</a>"
