@@ -11,6 +11,7 @@ Screen capture of the application: http://recordit.co/DYs5q9p5zT
  `docker build .`
 - Run your container from your project folder using
  `docker-compose up`
+- The application is running on port 5000. On your browser address bar, type http://localhost:5000/ to access the web application. 
  
 ## Usage
 - User can register an account and login to access the application.
