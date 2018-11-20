@@ -1,0 +1,48 @@
+{#<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" type="text/css">#}
+<link rel="stylesheet" href="/static/style.css" type="text/css">
+{#<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>#}
+{% block body %}
+{% if session['logged_in'] %}
+<p>You're logged in already!</p>
+{% else %}
+
+
+<form method="POST">
+    <div class="login">
+        <div class="login-screen">
+            <div class="app-title">
+                <h1>Login / Register</h1>
+            </div>
+
+            <div class="login-form">
+                <hr>
+                    {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                            <ul class="no-style">
+                                {% for message in messages %}
+                                    <li><small>{{ message }}</small></li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                    {% endwith %}
+                <div class="control-group">
+                    <input type="email" class="login-field" value="" placeholder="email" name="email" required>
+                </div>
+
+                <div class="control-group">
+                    <input type="password" class="login-field" value="" placeholder="password" name="password" required>
+                </div>
+                <br>
+
+                <input type="submit" formaction="/login" value="Log in" class="btn btn-primary btn-large btn-block">
+                <br>
+                <input type="submit" formaction="/register" value="Register"
+                       class="btn btn-primary btn-large btn-block">
+                <br>
+            </div>
+        </div>
+    </div>
+</form>
+
+{% endif %}
+{% endblock %}

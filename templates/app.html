@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Apple Tree</title>
+{#    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" type="text/css">#}
+    <link rel="stylesheet" href="/static/style.css" type="text/css">
+    <link rel="stylesheet" href="/static/tree.css" type="text/css">
+</head>
+<body>
+    <div class="container">
+        <button class="btn-logout btn btn-primary btn-large btn-block"><a href="/logout">Logout</a></button>
+        <div>
+            <input type="text" class="input-tree-create" value="" placeholder="Enter value of root node">
+            <input type="button" class="btn-calculate btn-primary" value="Calculate MaxSum" disabled="">
+            <input type="text" id="txt-result" class="hidden" value="" placeholder="Result" disabled="">
+        </div>
+        <div class="modal">
+            <div class="modal-content">
+                <form id="frm-modal" action="">
+                    <span class="close-button">&times;</span>
+                    <input type="text" id="txt-left-data" class="modal-input" placeholder="Enter value of left child">
+                    <input type="text" id="txt-right-data" class="modal-input" placeholder="Enter value of right child">
+                    <input type="button" id="btn-add-nodes" value="Add Children">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="tree-container">
+        <div class="tree">
+            <ul>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+    <script src="../static/scripts/domJSON.js"></script>
+    <script src="/static/scripts/bintree.js"></script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 1rem 1.5rem;
+    width: 24rem;
+    border-radius: 0.5rem;
+}
+
+.close-button {
+    float: right;
+    width: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    background-color: lightgray;
+}
+
+.close-button:hover {
+    background-color: darkgray;
+}
+
+.show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.tree ul {
+    padding-top: 20px; position: relative;
+
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+}
+
+.tree li {
+    float: left; text-align: center;
+    list-style-type: none;
+    position: relative;
+    padding: 20px 5px 0 5px;
+
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+}
+
+.tree li::before, .tree li::after{
+    content: '';
+    position: absolute; top: 0; right: 50%;
+    border-top: 1px solid #ccc;
+    width: 50%; height: 20px;
+}
+
+.tree li::after{
+    right: auto; left: 50%;
+    border-left: 1px solid #ccc;
+}
+
+.tree li:only-child::after, .tree li:only-child::before {
+    display: none;
+}
+
+.tree li:only-child{ padding-top: 0;}
+
+.tree li:first-child::before, .tree li:last-child::after{
+    border: 0 none;
+}
+
+.tree li:last-child::before{
+    border-right: 1px solid #ccc;
+    border-radius: 0 5px 0 0;
+    -webkit-border-radius: 0 5px 0 0;
+    -moz-border-radius: 0 5px 0 0;
+}
+
+.tree li:first-child::after{
+    border-radius: 5px 0 0 0;
+    -webkit-border-radius: 5px 0 0 0;
+    -moz-border-radius: 5px 0 0 0;
+}
+
+.tree ul ul::before{
+    content: '';
+    position: absolute; top: 0; left: 50%;
+    border-left: 1px solid #ccc;
+    width: 0; height: 20px;
+}
+
+.tree li div{
+    min-width: 80px;
+    min-height: 80px;
+    height: 80px;
+    line-height: 75px;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #666;
+    font-family: arial, verdana, tahoma;
+    font-size: 16px;
+    display: inline-block;
+
+    border-radius: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+}
+
+.tree li div:hover, .tree li div:hover+ul li div {
+    background: #c8e4f8; color: #000; border: 1px solid #94a0b4;
+}
+
+.tree li div:hover+ul li::after,
+.tree li div:hover+ul li::before,
+.tree li div:hover+ul::before,
+.tree li div:hover+ul ul::before{
+    border-color:  #94a0b4;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+div.pop-up {
+    border-radius: 0 !important;
+    border: none !important;
+}
+
+div.pop-up:hover {
+    background-color: #FFF !important;
+}
+
+div.modal input {
+    margin: 5px;
+    display: block !important;
+}
