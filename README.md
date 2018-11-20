@@ -1,5 +1,5 @@
 # AppleTree
-Binary Tree MaxSum
+Binary Tree MaxSum: Given a binary tree, find the max sum of value of nodes of the deepest branch(es) of the tree.
 
 ## Demo
 Screen capture of the application: http://recordit.co/DYs5q9p5zT
