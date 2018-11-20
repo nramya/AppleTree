@@ -22,4 +22,4 @@ if __name__ == "__main__":
     app.register_blueprint(bintree)
     with app.app_context():
         db.metadata.create_all(bind=db.engine)
-    get_app().run(debug=True, host='0.0.0.0', port=4000)
+    get_app().run(debug=True, host='0.0.0.0', port=5000)
